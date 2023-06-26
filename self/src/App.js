@@ -1,18 +1,16 @@
-import React from 'react';
-import './App.css';
-
-import { Header } from './Components/Header';
-import {NavTab} from './Components/NavTab';
+import {Route, Routes} from "react-router-dom"
+import Home from "./View/Home"
+import ScoS from "./View/ScoS";
+import ScoX from "./View/ScoX";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <div className="container-xl">
-        <h1> SELF Creator</h1>
-       <NavTab/>
-      </div>
-    </div>
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/sco_s" element={<ScoS/>} />
+    <Route path="/sco_x" element={<ScoX/>} />
+  </Routes>
+
   );
 }
 

@@ -1,12 +1,26 @@
 .head-nav{
-    padding: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content:center;
 }
-.nav-tabs {
+.head-nav-tab {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    vertical-align: middle;
+
 
     .head-link{
-        padding-right: 20px;
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 1s ease-in-out;
+        padding: 10px;
+        border-radius: 15px;   
+        margin: 3px; 
+
+        &:hover{
+            background-color: rgb(134, 134, 134);
+        }
     }
 }
