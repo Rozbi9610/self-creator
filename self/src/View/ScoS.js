@@ -38,17 +38,11 @@ function ScoS() {
     { label: "Zebra DS 7708", value: "-Z7708" }
   ];
 
-  const camers = [
-    { label: "", value: "none" },
-    { label: "NIE", value: "-0VPR" },
-    { label: "TAK", value: "-1VPR" }
-  ];
 
   const [ral, setRal] = useState();
   const [motherBoard, setMotherBoard] = useState();
   const [_switche, setSwitche] = useState();
   const [scaner, setScaner] = useState();
-  const [camera, setCamera] = useState();
 
 
   const handleRalChange = (e) => {
@@ -63,12 +57,9 @@ function ScoS() {
   const handleScanerChange = (e) => {
     setScaner(e.target.value);
   };
-  const handleCameraChange = (e) => {
-    setCamera(e.target.value);
-  };
 
   useEffect(() => {
-    document.title = `PN: M4B SELF-S170-B-20${motherBoard}${scaner}${ral}${camera}`;
+    document.title = `PN: M4B SELF-S170-B-20${motherBoard}${scaner}${ral}-0VPR`;
   })
 
   return (
@@ -86,7 +77,7 @@ function ScoS() {
                 <h5>Product number</h5>
               </label>
               <div class="col-sm-10 PN">
-                <h5> M4B SELF-S170-B-20{motherBoard}{scaner}{ral}{camera}</h5>
+                <h5> M4B SELF-S170-B-20{motherBoard}{scaner}{ral}-0VPR</h5>
               </div>
             </div>
 
@@ -263,20 +254,8 @@ function ScoS() {
               </div>
             </div>
 
-            {/* formularz kamera security */}
-
-            <div className="row mb-3">
-              <label className="col-sm-2 col-form-label" id='camera'>
-                <h5>Kamera Security</h5>
-              </label>
-              <div class="col-sm-10">
-                <select class="form-select" onChange={handleCameraChange}>
-                  {camers.map((camera) => (
-                    <option value={camera.value}>{camera.label}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
+            <h4> Opcjonalne akcesoria</h4>
+            <hr />
 
             {/* formularz przedłużka */}
 
@@ -288,8 +267,35 @@ function ScoS() {
                 <input type="checkbox" id="USB_EXT" />
               </div>
             </div>
-            <h4>Akcesoria</h4>
-            <hr />
+
+            {/* formularz kamery */}
+
+            <div className="row mb-3">
+              <label className="col-sm-2 col-form-label" id='finish'>
+                <h5>Kamera security</h5>
+              </label>
+              <div class="col-sm-10">
+                <input type="checkbox" id="USB_EXT" />
+              </div>
+            </div>
+
+            <div className="row mb-3">
+              <label className="col-sm-2 col-form-label" id='finish'>
+                <h5>Kamera AI</h5>
+              </label>
+              <div class="col-sm-10">
+                <input type="checkbox" id="USB_EXT" />
+              </div>
+            </div>
+
+            <div className="row mb-3">
+              <label className="col-sm-2 col-form-label" id='finish'>
+                <h5>Kamera chceck age (DOZ)</h5>
+              </label>
+              <div class="col-sm-10">
+                <input type="checkbox" id="USB_EXT" />
+              </div>
+            </div>
 
             {/* formularz drukarka */}
 
