@@ -10,7 +10,6 @@ export const Header = () => {
                     </div>
                 </nav>
             </header>
-            <h1>SELF Creator</h1>
         </div>
 
     )

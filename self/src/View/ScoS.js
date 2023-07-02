@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Style/ScoS.scss'
 
 import { Header } from '../Components/Header';
-import { NavTab } from '../Components/NavTab';
+import { NavTabSelf } from '../Components/NavTabSelf';
 
 function ScoS() {
 
@@ -58,17 +58,15 @@ function ScoS() {
     setScaner(e.target.value);
   };
 
-  useEffect(() => {
-    document.title = `PN: M4B SELF-S170-B-20${motherBoard}${scaner}${ral}-0VPR`;
-  })
 
   return (
     <div className="App">
-      <Header />
-      <h3> SCO S</h3>
+      <Header />      
+      <h3> Self Creator SCO S</h3>
       <div className="container-xl">
-        <NavTab />
+        <NavTabSelf />
       </div>
+     
       < div className='container text-center'>
         <form>
           <div className='form-row'>
@@ -363,8 +361,6 @@ function ScoS() {
             </div>
           </div>
         </form>
-
-        <h2> I teraz kluczowe pytanie, jak powiązać kasę (powyżej) z wagą kontrolną i/lub sygnalizatorem?</h2>
       </div>
     </div>
   );

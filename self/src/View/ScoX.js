@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Style/ScoX.scss'
 
 import { Header } from '../Components/Header';
-import { NavTab } from '../Components/NavTab';
+import { NavTabSelf } from '../Components/NavTabSelf';
 
 function ScoS() {
 
@@ -67,16 +67,13 @@ function ScoS() {
   }
 
 
-  useEffect(() => {
-    document.title = `PN: M4B SELF-X170-B-20${motherBoard}${scaner}${scale}${ral}-0VPR`;
-  })
 
   return (
     <div className="App">
       <Header />
-      <h3> SCO X</h3>
+      <h3>Self Creator SCO X</h3>
       <div className="container-xl">
-        <NavTab />
+        <NavTabSelf />
       </div>
       < div className='container text-center'>
         <form>
