@@ -13,6 +13,9 @@ function Home() {
                 <Link to='/joym'  >
                     <h4>JOY M Creator</h4>
                 </Link>
+                <Link to='/joyk'  >
+                    <h4>JOY K Creator</h4>
+                </Link>
             </div>
 
         </div>
