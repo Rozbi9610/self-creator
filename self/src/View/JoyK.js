@@ -27,12 +27,14 @@ function ScoS() {
         { label: "", value: "none" },
         { label: "Szyba czarna uniwersalna / KFC 22", value: "none" },
         { label: "Szyba biała uniwersalna / BK 22", value: "none" },
-        { label: "Szyba uniwersalna / KFC 32", value: "none" },
+        { label: "Szyba uniwersalna LONG / KFC 32", value: "none" },
+        { label: "Szyba uniwersalna SHORT / KFC 32", value: "none" },
         { label: "Szyba custom BK 32", value: "none" }
     ]
 
     const motherBoards = [
         { label: "", value: "none" },
+        { label: "AsRock SBC-311V", value: "-A4010U" },
         { label: "AsRock IMB-151", value: "-A2930" },
         { label: "AsRock IMB-157J", value: "-A3455" },
         { label: "AsRock IMB-159NR", value: "-A4120" },
@@ -59,19 +61,27 @@ function ScoS() {
         { label: "Posnet Thermal HD Online", value: "-PHD" },
         { label: "Posnet Therm HD P (paragonowa)", value: "-PHD-non" },
         { label: "Epon TM-T20", value:"-E20"},
-        { label: "Epson TM-T88", value:"-E88"},
-        { label: "Datec SK1-311", value:"-SK1"},
-        { label: "Datec SK1-31 (paragonowa", value:"-SK1-non"}
+        { label: "Epson TM-T88VII", value:"-E88"},
+        { label: "Datec SK1-311", value:"-SK1-311"},
+        { label: "Datec SK1-31f (paragonowa)", value:"-SK1-32F"},
+        { label: "Datec SK1-21f (paragonowa)", value:"-SK1-21F"},
+        { label: "Wincor Nixdorf Th230", value:"-TH230"},
+        { label: "Sunso WTP800 (paragonowa)", value:"-WTP800"}
     ];
 
     const terminale = [
         { label: "", value: "none" },
-        { label: "IPP350", value: "-IPP350" },
-        { label: "Lane 3000", value: "-3000" },
-        { label: "Lane 5000", value:"-5000"},
-        { label: "P400", value:"-P400"},
-        { label: "Desk 3200", value:"-3200"},
-        { label: "Desk 3500", value:"-3500"}
+        { label: "Ingenico IPP350", value: "-IPP350" },
+        { label: "Ingenico IPP320", value: "-IPP320" },
+        { label: "Ingenico Lane 3000", value: "-Lane3000" },
+        { label: "Ingenico Lane 5000", value:"-Lane5000"},
+        { label: "Ingenico Desk 3200", value:"-Desk3200"},
+        { label: "Ingenico Desk 3500", value:"-Desk3500"},
+        { label: "Ingenico Move 3200", value:"-Move3500"},
+        { label: "Verifone P400", value:"-P400"},
+        { label: "PAX Q80", value:"-Q80"},
+        { label: "Castles Vega 3000", value:"-Vega3000"},
+        { label: "Castle UPT 1000(F)", value:"-UPT1000"},
     ];
    
 
@@ -126,7 +136,7 @@ function ScoS() {
                                 <h5>Product number</h5>
                             </label>
                             <div class="col-sm-10 PN">
-                                <h5> M4B JOY-K{obudowa}-10{motherBoard}{drukarka}{kolor}</h5>
+                                <h5> M4B JOY-K{obudowa}-10{kolor}{motherBoard}{drukarka}{terminal}</h5>
                             </div>
                         </div>
                         {/* formularz ZLM */}
