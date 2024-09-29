@@ -1,12 +1,13 @@
 body {
-  margin: 0;
   font-family: Tahoma, "Trebuchet MS", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  background-color: #343232;
+  max-height:max-content;
+  margin: 0;
+}
+
+h1{
   color: white;
 }
 
-h6,h5,h4,h3,h2,h1{
-  margin: 0;
-}
+
+

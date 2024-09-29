@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './Style/ScoS.scss'
+import '../Table.scss'
 
-import { Header } from '../Components/Header';
 
 function ScoS() {
 
@@ -77,7 +76,6 @@ function ScoS() {
 
     return (
         <div className="App">
-            <Header />
             <h3>Joy M Creator</h3>
 
 
