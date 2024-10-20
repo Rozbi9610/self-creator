@@ -4,6 +4,8 @@ import ScoS from "../View/SCO/ScoS";
 import ScoX from "../View/SCO/ScoX";
 import StatusLight from "../View/SCO/StatusLight";
 import Hebe from "../View/SCO/Hebe";
+import SuperPharm from "../View/SCO/SuperPharm";
+import DrMax from "../View/SCO/DrMax";
 
 function NavSelf() {
 
@@ -34,6 +36,8 @@ function NavSelf() {
             {selectedTab === 1 && <ScoX />}
             {selectedTab === 2 && <StatusLight />}
             {selectedTab === 3 && <Hebe />}
+            {selectedTab === 4 && <SuperPharm />}
+            {selectedTab === 5 && <DrMax />}
         </Box>
     );
 }

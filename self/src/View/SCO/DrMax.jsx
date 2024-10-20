@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../Table.scss'
 
 
-function Hebe() {
+function DrMax() {
 
     const rals = [
         { label: "", value: "none" },
@@ -11,21 +11,12 @@ function Hebe() {
 
     const revs = [
         { label: "", value: "none" },
-        { label: "1.0", value: "10" },
-        { label: "2.0", value: "20" },
-        { label: "3.0", value: "30" }
+        { label: "1.0", value: "10" }
     ];
 
     const models = [
         { label: "", value: "none" },
-        { label: "Wolnostojąca", value: "CD195E" },
-        { label: "Nablatowa", value: "CD195F" }
-    ];
-
-    const variants = [
-        { label: "", value: "none" },
-        { label: "Polski", value: "PL" },
-        { label: "Czeski / Słowacki", value: "CZ/SK" }
+        { label: "Wolnostojąca", value: "CD195E" }
     ];
 
     const comps = [
@@ -41,14 +32,19 @@ function Hebe() {
         { label: "TAK", value: "Yes" },
         { label: "Nie", value: "NO" }
     ];
+    const switches = [
+        { label: "", value: "null" },
+        { label: "Switch TL-SF1005D", value: "TL-SF1005D" },
+        { label: "Switch TL-SG105e (zarządzalny)", value: "TL-SG105e" }
+    ];
 
     const [ral, setRal] = useState();
     const [rev, setRev] = useState();
-    const [variant, setVariant] = useState();
     const [model, setModel] = useState();
     const [comp, setComp] = useState();
     const [scaner, setScaner] = useState();
     const [option, setOption] = useState();
+    const [_switche, setSwitche] = useState();
 
 
     const handleRalChange = (e) => {
@@ -60,9 +56,6 @@ function Hebe() {
     const handleModelChange = (e) => {
         setModel(e.target.value);
     };
-    const handleVariantChange = (e) => {
-        setVariant(e.target.value);
-    };
     const handleCompChange = (e) => {
         setComp(e.target.value);
     };
@@ -72,11 +65,14 @@ function Hebe() {
     const handleOptionChange = (e) => {
         setOption(e.target.value);
     };
+    const handleSwitchChange = (e) => {
+        setSwitche(e.target.value);
+    };
 
     return (
         <div className="App">
             < div className='container text-center'>
-                <h3>Creator Hebe</h3>
+                <h3>Creator Dr. Max</h3>
                 <form>
                     <div className='form-row'>
                         {/* formularz ZLM */}
@@ -147,21 +143,6 @@ function Hebe() {
                             </div>
                         </div>
 
-                        {/* formularz wariant */}
-
-                        <div className="row mb-3">
-                            <label className="col-sm-3 col-form-label" id='ral'>
-                                <h5>Wariant</h5>
-                            </label>
-                            <div class="col-sm-9">
-                                <select class="form-select" onChange={handleVariantChange}>
-                                    {variants.map((variant) => (
-                                        <option value={variant.value}>{variant.label}</option>
-                                    ))}
-                                </select>
-                            </div>
-                        </div>
-
                         {/* formularz szyba */}
 
                         <div className="row mb-3">
@@ -219,6 +200,29 @@ function Hebe() {
                             </div>
                         </div>
 
+                        {/* formularz switch  */}
+
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='switche'>
+                                <h5>Model Switch</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-select" onChange={handleSwitchChange}>
+                                    {switches.map((switche) => (
+                                        <option value={switche.value}>{switche.label}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='switch_sn'>
+                                <h5>S/N Switch</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <input type="group" className="form-control" id="inputSwitch_sn" />
+                            </div>
+                        </div>
+
                         {/* formularz zasilacz  */}
                         <div className="row mb-3">
                             <label className="col-sm-3 col-form-label" id='switch_sn'>
@@ -229,12 +233,11 @@ function Hebe() {
                             </div>
                         </div>
 
-                        <h4>Akcesoria</h4>
+                        <h4> Akcesoria</h4>
                         <hr />
+                        {/* formularz dodatki */}
 
-                         {/* formularz dodatki */}
-
-                         <div className="row mb-3">
+                        <div className="row mb-3">
                             <label className="col-sm-3 col-form-label" id='ral'>
                                 <h5>Wzmacniacz głosnika</h5>
                             </label>
@@ -258,6 +261,54 @@ function Hebe() {
                                 </select>
                             </div>
                         </div>
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='ral'>
+                                <h5>Sygnalizator</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-select" onChange={handleOptionChange}>
+                                    {options.map((option) => (
+                                        <option value={option.value}>{option.label}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='ral'>
+                                <h5>iButton</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-select" onChange={handleOptionChange}>
+                                    {options.map((option) => (
+                                        <option value={option.value}>{option.label}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='ral'>
+                                <h5>Kamera Security</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-select" onChange={handleOptionChange}>
+                                    {options.map((option) => (
+                                        <option value={option.value}>{option.label}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
+                        <div className="row mb-3">
+                            <label className="col-sm-3 col-form-label" id='ral'>
+                                <h5>Kamera Check Age</h5>
+                            </label>
+                            <div class="col-sm-9">
+                                <select class="form-select" onChange={handleOptionChange}>
+                                    {options.map((option) => (
+                                        <option value={option.value}>{option.label}</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </div>
 
                     </div>
                 </form>
@@ -266,4 +317,4 @@ function Hebe() {
     );
 }
 
-export default Hebe;
+export default DrMax;
