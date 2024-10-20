@@ -52,7 +52,8 @@ function ScoS() {
   ];
 
   const switches = [
-    { label: "", value: "none" },
+    { label: "", value: "null" },
+    { label: "Brak switcha", value: "none" },
     { label: "Switch TL-SF1005D", value: "TL-SF1005D" },
     { label: "Switch TL-SG105e (zarządzalny)", value: "TL-SG105e" }
   ];
@@ -369,6 +370,24 @@ function ScoS() {
               </div>
 
             ) : null}
+
+            {/* formularz zasilacz  */}
+            <div className="row mb-3">
+              <label className="col-sm-3 col-form-label" id='switch_sn'>
+                <h5>S/N Zasilacza LRS</h5>
+              </label>
+              <div class="col-sm-9">
+                <input type="group" className="form-control" id="inputSwitch_sn" />
+              </div>
+            </div>
+            <div className="row mb-3">
+              <label className="col-sm-3 col-form-label" id='switch_sn'>
+                <h5>S/N Zasilacza drukarki</h5>
+              </label>
+              <div class="col-sm-9">
+                <input type="group" className="form-control" id="inputSwitch_sn" />
+              </div>
+            </div>
 
             {/* formularz switch  */}
 

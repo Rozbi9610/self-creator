@@ -13,7 +13,9 @@ function ProductCreator() {
                     <Button type="self size pill" text="Self" />
                 </Link>
                 <Button type="joy size pill" text="Joy" />
-                <Button type="move size pill" text="Move" />
+                <Link to='/product_Creator/move'>
+                    <Button type="move size pill" text="Move" />
+                </Link>
             </div>
         </>
     );

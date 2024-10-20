@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Box, Tab, Tabs } from "@mui/material";
 import ScoS from "../View/SCO/ScoS";
 import ScoX from "../View/SCO/ScoX";
-
-
+import StatusLight from "../View/SCO/StatusLight";
+import Hebe from "../View/SCO/Hebe";
 
 function NavSelf() {
 
@@ -15,7 +14,7 @@ function NavSelf() {
     };
 
     return (
-        <Box sx={{margin:'2.5rem', width:'50%', padding:'2rem 2rem', borderRadius:'30px', border:'1px black none', marginLeft: 'auto', marginRight: 'auto', color: 'white'}} centered bgcolor='#141414'>
+        <Box sx={{ margin: '2.5rem', width: '50%', padding: '2rem 2rem', borderRadius: '30px', border: '1px black none', marginLeft: 'auto', marginRight: 'auto', color: 'white' }} centered bgcolor='#141414'>
             <Box position="static" textColor="white"  >
                 <Tabs value={selectedTab}
                     onChange={handleChange}
@@ -31,10 +30,11 @@ function NavSelf() {
                     <Tab label="SELF Dr. Max" />
                 </Tabs>
             </Box>
-            {selectedTab ===0 && <ScoS/>}
-            {selectedTab ===1 && <ScoX/>}
+            {selectedTab === 0 && <ScoS />}
+            {selectedTab === 1 && <ScoX />}
+            {selectedTab === 2 && <StatusLight />}
+            {selectedTab === 3 && <Hebe />}
         </Box>
-        
     );
 }
 export default NavSelf;

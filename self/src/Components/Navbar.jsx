@@ -16,7 +16,6 @@ function Navbar({ page, text }) {
                 <a>{page}{text}</a>
             </li>
         </ul>
-
     </nav >
 }
 export default Navbar;

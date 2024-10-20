@@ -38,7 +38,8 @@ function ScoX() {
   ]
 
   const switches = [
-    { label: "", value: "none" },
+    { label: "", value: "null" },
+    { label: "Brak switcha", value: "none" },
     { label: "Switch TL-SF1005D", value: "TL-SF1005D" },
     { label: "Switch TL-SG105e (zarządzalny)", value: "TL-SG105e" }
   ];
@@ -87,6 +88,7 @@ function ScoX() {
 
   const checkScales = [
     { label: "", value: "none" },
+    { label: "Fawag 300x500", value: "Fawag300" },
     { label: "Fawag 500x500", value: "Fawag500" },
     { label: "Keli 500x500", value: "Keli500" },
     { label: "Keli 500x500", value: "Keli800" }
@@ -268,7 +270,7 @@ function ScoX() {
 
             <div className="row mb-3">
               <label className="col-sm-3 col-form-label" id='pn_RAM'>
-                <h5>Model RAM</h5>
+                <h5>Model pamięci RAM</h5>
               </label>
               <div class="col-sm-9">
                 <select class="form-select" onChange={handleRamChange}>
@@ -280,7 +282,7 @@ function ScoX() {
             </div>
             <div className="row mb-3">
               <label className="col-sm-3 col-form-label" id='sn_RAM'>
-                <h5>S/N RAM</h5>
+                <h5>S/N pamięci RAM</h5>
               </label>
               <div class="col-sm-9">
                 <input type="group" className="form-control" id="inputSN_ram" />
@@ -307,6 +309,24 @@ function ScoX() {
               </label>
               <div class="col-sm-9">
                 <input type="group" className="form-control" id="inputSN_disk" />
+              </div>
+            </div>
+
+            {/* formularz zasilacz  */}
+            <div className="row mb-3">
+              <label className="col-sm-3 col-form-label" id='switch_sn'>
+                <h5>S/N Zasilacza LRS</h5>
+              </label>
+              <div class="col-sm-9">
+                <input type="group" className="form-control" id="inputSwitch_sn" />
+              </div>
+            </div>
+            <div className="row mb-3">
+              <label className="col-sm-3 col-form-label" id='switch_sn'>
+                <h5>S/N Zasilacza drukarki</h5>
+              </label>
+              <div class="col-sm-9">
+                <input type="group" className="form-control" id="inputSwitch_sn" />
               </div>
             </div>
 
